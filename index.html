@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Page Title</title>
+    <style>
+        body {
+            background-color: #808080;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Added to position h1 absolutely */
+        }
+
+        h1 {
+            position: absolute;
+            top: 10px; /* Adjust as needed */
+            left: 10px; /* Adjust as needed */
+            margin: 0; /* Remove default margin */
+        }
+        .games-list {
+            list-style-type: none; /* Removes the default bullet points */
+            padding: 0; /* Removes the default padding */
+        }
+
+        .games-list li {
+            margin-bottom: 30px; /* Adds some space between games */
+            text-align: center; /* Centers the content of the list item */
+        }
+
+        .games-list h2 {
+            text-align: center; /* Centers the game title */
+            margin-bottom: 10px; /* Adds some space between the title and the button */
+        }
+
+        .game-button {
+            background-color: #333; /* Dark grey color */
+            color: #fff; /* White text */
+            padding: 10px 20px; /* Vertical and horizontal padding */
+            border: none; /* Removes the default border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Changes the cursor to a hand when hovering */
+            text-decoration: none; /* Removes the underline from the link */
+            display: inline-block; /* Makes it inline like text */
+            margin-top: 20px; /* Adds some space above the button */
+        }
+
+        .game-button:hover {
+            background-color: #555; /* Slightly lighter grey when hovering */
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="goToHomePage()">ZeroHitPoint</h1>
+
+    <p>Click which game you want to play</p>
+    <ul class="games-list">
+        <li>
+            <h2>Snake Game</h2>
+            <a href="game.html" class="game-button">Play Game</a>
+        </li>
+        <!--<li>
+            <h2>test</h2>
+            <a href="test.html" class="game-button">Play Game</a>
+        </li>-->
+        <!-- Add more games in the same format as above -->
+    </ul>
+
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // Redirects to the root of your website
+        }
+    </script>
+</body>
+</html>
