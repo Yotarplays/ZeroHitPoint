@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZeroHitPoint</title>
+    <style>
+        body {
+            background-color: #808080;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* For positioning the h1 and deathScreen */
+        }
+
+        h1 {
+            position: absolute;
+            top: 10px; /* Adjust as needed */
+            left: 10px; /* Adjust as needed */
+            margin: 0; /* Remove default margin */
+        }
+
+        #upgrades {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #deathScreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 300px;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers content vertically */
+            align-items: center; /* Centers content horizontally */
+            border-radius: 10px;
+            padding: 20px; /* Added padding for a bit of breathing room */
+        }
+
+            #deathScreen h1 {
+                color: white;
+                margin: 0; /* Clear default margins */
+                padding: 0;
+            }
+
+        #deathScreen button {
+            margin-top: 70px; /* Add a bit of margin to space out from the heading */
+            padding: 5px 15px; /* Padding for button for better appearance */
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="goToHomePage()">ZeroHitPoint</h1>
+    <canvas id="gameCanvas" width="800" height="600"> </canvas>
+    <div id="waveCounter">Wave: 1</div>
+    <div id="highScore">High Score: 0</div>
+    <div id="deathScreen" style="display:none;">
+        <h1>You Died!</h1>
+        <button id="restartButton">Try Again?</button>
+    </div>
+
+    <div id="score"> Coins: 0</div>
+    <div id="upgrades"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

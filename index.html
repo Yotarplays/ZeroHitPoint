@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Page Title</title>
+    <title>ZeroHitPoint</title>
     <style>
         body {
             background-color: #808080;
@@ -50,6 +50,22 @@
         .game-button:hover {
             background-color: #555; /* Slightly lighter grey when hovering */
         }
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game-image {
+            margin-top: 20px;
+            cursor: pointer; /* Changes the cursor to a hand when hovering */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .game-image:hover {
+            background-color: #555; /* Slightly lighter grey when hovering */
+        }
     </style>
 </head>
 <body>
@@ -57,16 +73,17 @@
 
     <p>Click which game you want to play</p>
     <ul class="games-list">
-        <li>
+        <li class="game-container">
             <h2>Snake Game</h2>
-            <img src="snake.png" alt="Snake Game Preview" width="320" height="320">
-            <a href="game.html" class="game-button">Play Game</a>
+            <a href="game.html">
+                <img src="snake.png" alt="Snake Game Preview" width="160" height="160" class="game-image">
+            </a>
         </li>
-        <!--<li>
-            <h2>test</h2>
-            <a href="test.html" class="game-button">Play Game</a>
-        </li>-->
-        <!-- Add more games in the same format as above -->
+        <li>
+            <h2>ZomTime</h2>
+            <a href="zombie.html" class="game-button">Play Game</a>
+        </li>
+         <!--Add more games in the same format as above -->
     </ul>
 
     <script>
